@@ -9,7 +9,7 @@ var round = {
 	crystal2:2,
 	crystal3:3,
 	crystal4:17,
-	target:0,
+	target:96,
 	score:0
 }
 

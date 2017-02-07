@@ -3,14 +3,39 @@
  }
 
 
- .boxScore {
+ #boxScore {
  	height: 80px;
- 	width: 100px;
+ 	/*width: 100px;*/
  	background-color: blue;
  	color: white;
  	font-family: "Arial";
- 	font-size: 48px;
+ 	font-size: 72px;
  	text-align: center;
+ }
+
+
+ #targetScore {
+ 	height: 80px;
+ 	/*width: 100px;*/
+ 	background-color: hotpink;
+ 	color: white;
+ 	font-family: "Arial";
+ 	font-size: 72px;
+ 	text-align: center;
+ }
+
+ #tally {
+ 	clear: all;
+ 	margin: 40px;
+ 	font-family: "Arial";
+ 	font-size: 36px;
+ }
+
+ #reset {
+float: left;
+ 	margin: 40px;
+ 	font-family: "Arial";
+ 	font-size: 36px;
  }
 
 
