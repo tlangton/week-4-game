@@ -15,37 +15,50 @@
 		content
 	</div>
 
-	<div class="jade">
-
-		<button id="create">Create Content</button>
+	<div class="boxScore">
 	</div>
 
+	<div class="buttons">
 
+
+		<div class="crystalButton" buttonId="b1">
+		</div>
+		<div class="crystalButton" buttonId="b2">
+		</div>
+		<div class="crystalButton" buttonId="b3">
+		</div>
+		<div class="crystalButton" buttonId="b4">
+		</div>
+	</div>
 
 
 	<script type="text/javascript">
 		$("document").ready(function() {
 
-			document.getElementById("create").addEventListener("click", function (evt) {
-				createContent();
+			$('.crystalButton').click(function() {
+				butID = $(this).attr('buttonId');
+				addToScore();
 			});
 
-			function createContent() {
-            // use the html() function to change the content of the div
-            $(".jade").html("<p>Hi there!</p>");
-        }
+			function addToScore() {
+				if (butID =="b1") {
+					round.score = round.score + round.crystal1;
+					$(".boxScore").text(round.score);
+				}  else if (butID =="b2") {
+					round.score = round.score + round.crystal2;
+					$(".boxScore").text(round.score);
+				} else if (butID =="b3") {
+					round.score = round.score + round.crystal3;
+					$(".boxScore").text(round.score);
+				} else if (butID =="b4") {
+					round.score = round.score + round.crystal4;
+					$(".boxScore").text(round.score);
+				}
+			}
+		});
 
-
-
-        	// $(".jade").click(function(){
-        	// 	 // var gameStats.crystalOne =   10;
-        	// 	alert("Jade was clicked."  );
-        	// });
-
-        });
-
-    </script>
-
+	</script>
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </body>
 </html>

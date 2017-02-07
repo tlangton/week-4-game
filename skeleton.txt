@@ -1,0 +1,31 @@
+sets 4 crystal values from 1 - 12 (random)
+set game target 19 - 120 (random)
+
+game is to select (click) crystals - value added to total to total equal to game random target
+crystal sum loses if > game random target
+
+game vars
+
+game.wins
+game.losses
+
+var game persists till reload -
+need to restart game without page reload.
+
+vars - 4 crystals - set to between 1-12 for the game
+
+round.crystal_1
+round.crystal_2
+round.crystal_3
+round.crystal_4
+
+round.target
+round.userAggragate
+
+var round. reset for end of round
+
+round crystal images swap randomly
+
+
+
+build 4 crystals and have them aggagate to one var

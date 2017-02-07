@@ -1,11 +1,39 @@
  .content {
- 	color : red;
+ 	color : black;
  }
 
 
- .jade {
- 	height: 200px;
- 	width: 200px;
+ .boxScore {
+ 	height: 80px;
+ 	width: 100px;
  	background-color: blue;
  	color: white;
+ 	font-family: "Arial";
+ 	font-size: 48px;
+ 	text-align: center;
+ }
+
+
+ .buttons {
+ 	position: relative;
+ }
+
+
+
+ .crystalButton{
+ 	float: left;
+ 	margin: 20px;
+ 	height: 100px;
+ 	width: 200px;
+ 	position: relative;
+ 	top: 20px;
+ 	background-color: blue;
+ 	color: white;
+ 	font-family: "Arial";
+ 	font-size: 36px;
+ 	text-align: center;
+ 	background-image: url("../images/crystal-latticeA.jpg");
+ 	border-radius: 40px;
+
+
  }
