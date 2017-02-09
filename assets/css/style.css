@@ -4,43 +4,55 @@
 
 
  #boxScore {
+ 	margin:20px;
  	height: 80px;
- 	/*width: 100px;*/
+ 	width: 100%;
  	background-color: blue;
  	color: white;
  	font-family: "Arial";
  	font-size: 72px;
  	text-align: center;
+ 	border-radius: 25px;
  }
 
 
  #targetScore {
+ 	margin:20px;
  	height: 80px;
- 	/*width: 100px;*/
+ 	width: 100%;
  	background-color: hotpink;
  	color: white;
  	font-family: "Arial";
  	font-size: 72px;
  	text-align: center;
+ 	border-radius: 25px;
  }
 
- #tally {
+ #tally, #message {
  	clear: all;
- 	margin: 40px;
+ 	margin-top: 60px;
+ 	padding: 20px;
  	font-family: "Arial";
- 	font-size: 36px;
+ 	font-size: 24px;
+background-color: #ccc;
  }
 
- #reset {
-float: left;
- 	margin: 40px;
+ #playAgain {
+ 	/*float: left;*/
+ 	width: 47%;
+ 	margin-top: 60px;
+ 	margin-left: 286px;
  	font-family: "Arial";
- 	font-size: 36px;
+ 	font-size: 24px;
+ 	border-radius: 10px;
+ 	padding:20px;
  }
 
 
  .buttons {
  	position: relative;
+ 	left:50%;
+    margin-left:-476px;
  }
 
 
@@ -48,17 +60,75 @@ float: left;
  .crystalButton{
  	float: left;
  	margin: 20px;
- 	height: 100px;
+ 	height: 200px;
  	width: 200px;
  	position: relative;
  	top: 20px;
- 	background-color: blue;
- 	color: white;
- 	font-family: "Arial";
- 	font-size: 36px;
- 	text-align: center;
- 	background-image: url("../images/crystal-latticeA.jpg");
  	border-radius: 40px;
 
+ }
+
+ .b1 {
+ 	background-image: url("../images/graphene.jpg");
+ }
+ .b2 {
+ 	background-image: url("../images/sphere1.png");
+ }
+ .b3 {
+ 	background-image: url("../images/crystal-latticeA.jpg");
+ }
+ .b4 {
+ 	background-image: url("../images/crys1.png" );
+ 	/*mask-image: url("../images/crys1_msk.png" );*/
+ }
+
+
+ body {
+background-image: url("../images/bkg1.png");
 
  }
+
+
+   .tint {
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    -webkit-box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
+    -moz-box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
+    box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
+
+  }
+
+  .tint:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,255,255, 0.5);
+    -moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+  }
+
+  .tint:hover:before {
+    background: none;
+  }
+
+  .t2:before {
+    background: rgba(0,0,255, 0.5);
+  }
+
+  .t3:before {
+    background: rgba(255,0,0, 0.5);
+  }
+
+  .t4:before {
+    background: rgba(0,255,0, 0.5);
+  }

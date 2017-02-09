@@ -29,3 +29,7 @@ round crystal images swap randomly
 
 
 build 4 crystals and have them aggagate to one var
+
+Message panel - anounce win, loss
+
+reset everything button

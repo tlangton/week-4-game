@@ -10,97 +10,72 @@
 
 </head>
 <body>
+
 	<div class="container">
-		<div class="col-lg-4">
+	<row>
+		<div class="col-lg-6">
 			<div id="boxScore">
 				Score:
 			</div>
 		</div>
-		<div class="col-lg-4">
+		<div class="col-lg-6">
 			<div id="targetScore">
 				Target:
 			</div>
 		</div>
-
-
+</row>
+<row>
 
 		<div class="col-lg-12">
 
 			<div class="buttons">
-				<div class="crystalButton" buttonId="b1">
+				<div class="crystalButton b1 tint t1" buttonId="b1">
 				</div>
-				<div class="crystalButton" buttonId="b2">
+				<div class="crystalButton b2 tint t2" buttonId="b2">
 				</div>
-				<div class="crystalButton" buttonId="b3">
+				<div class="crystalButton b3 tint t3" buttonId="b3">
 				</div>
-				<div class="crystalButton" buttonId="b4">
+				<div class="crystalButton b4 tint t4" buttonId="b4">
 				</div>
 			</div>
 		</div>
-		<div class="col-lg-8">
+</row>
+		<row>
+		<div class="col-lg-6">
 			<div id="tally">
 				<!-- tally -->
 			</div>
 		</div>
-		<div class="col-lg-4">
-			<button id="reset">
-				Reset
+		<div class="col-lg-6">
+			<div id="message">
+				<!-- message -->
+			</div>
+		</div>
+		</row>
+		<row>
+		<div class="col-lg-12">
+			<button id="playAgain">
+				Play Again?
 			</button>
 		</div>
-
+</row>
 		<script type="text/javascript">
 			$("document").ready(function() {
 
 				$("#targetScore").text("Target: " + round.target);
 				$("#boxScore").text("Score: " + round.score);
 
-			// $("#tally").text("Wins: " + game.wins + "  Losses: " + game.losses);
+				$('.crystalButton').click(function() {
+					butID = $(this).attr('buttonId');
+					addToScore();
+				});
 
-			$('.crystalButton').click(function() {
-				butID = $(this).attr('buttonId');
-				addToScore();
+				$('#playAgain').click(function(){
+					playAgain();
+				});
 			});
-
-			function addToScore() {
-				if (butID =="b1") {
-					round.score = round.score + round.crystal1;
-					$("#boxScore").text("Score: " + round.score);
-				}  else if (butID =="b2") {
-					round.score = round.score + round.crystal2;
-					$("#boxScore").text("Score: " + round.score);
-				} else if (butID =="b3") {
-					round.score = round.score + round.crystal3;
-					$("#boxScore").text("Score: " + round.score);
-				} else if (butID =="b4") {
-					round.score = round.score + round.crystal4;
-					$("#boxScore").text("Score: " + round.score);
-				}
-
-				if (round.score < round.target) {
-				} else if (round.score == round.target) {
-					alert ("winner"),
-					game.wins ++;
-				} else	alert ("loser"),
-				game.losses ++;
-
-				$("#tally").text("Wins: " + game.wins + "  Losses: " + game.losses);
-			}
-
-			$('#reset').click(function(){
-				reset();
-			});
-
-			function reset(){
-				round.score = 0;
-				$("#boxScore").text("Score: " + round.score);
-
-			}
-
-
-
-		});
-	</script>
-</div>
+		</script>
+	</div>
 </div>
 </div>
 
