@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script type="text/javascript">
+		var randNum;
+		var randList=[];
+		var i=0;
+		var uniqueNum = 4; //length of list
+		var maxValue = 12; //maximum value of list member
+		// IMPORTANT - maxValue must be greater than uniqueNum - or crash.
+
+		function get_random()
+		{
+			randNum= 1 + (Math.floor(Math.random()*maxValue));
+		}
+
+		function myUniqueRandomList() {
+			while	(i < uniqueNum) {
+				get_random();
+				var existsInList = randList.includes (randNum);
+				//if new random is not in the list, it is added and count is incremented;
+				if (existsInList == false) {
+					randList.push(randNum);
+					i ++;
+				}
+			}
+		}
+
+		myUniqueRandomList();
+
+		console.log(randList);
+
+	</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

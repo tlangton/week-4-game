@@ -98,12 +98,15 @@ function addToScore() {
 			game.wins ++,
 			gameOver = 1,
 			$("#tally").text("Wins: " + game.wins + "  Losses: " + game.losses),
-			$("#message").text("You Win!");
+			$("#message").text("You Win!"),
+			$("#message").css({"display":"visible"});
+
 
 		} else	game.losses ++,
 		gameOver = 1,
 		$("#tally").text("Wins: " + game.wins + "  Losses: " + game.losses),
-		$("#message").text("You Lose!");
+		$("#message").text("You Lose!"),
+		$("#message").css({"display":"visible"});
 
 	}
 }
@@ -115,22 +118,25 @@ function addToScore() {
   	round.score = 0,
   	gameOver = 0,
   	$("#boxScore").text("Score: " + round.score),
-  	$("#message").text(" "),
+  	// $("#message").text(" "),
   	setTarget(),
   	$("#targetScore").text("Target: " + round.target),
+
 	setUniqueRandomList(),
   	setCrystals(),
-  	console.log(randList);
-  	// GetUnique();
+  	console.log(randList),
+  	$("#message").css({"display":"none"});
   }
 
-
 // $(document).ready(function(){
-// var randbkg = 1 + (Math.floor(Math.random()*6));
-// $("body").css({"background-image": "url('../images/bkg"+[randbkg]+".png')";
+var randbkg = 1 + (Math.floor(Math.random()*8));
+$("body").css({"background-image": "url('assets/images/bkg"+[randbkg]+".png')"});
+console.log(randbkg);
 
-// $(".b1").css({"background-image": "url('../images/crys"+randList[0]+".png')"
-
+$(".b1").css({"background-image": "url('assets/images/crys"+randList[0]+".png')"});
+$(".b2").css({"background-image": "url('assets/images/crys"+randList[1]+".png')"});
+$(".b3").css({"background-image": "url('assets/images/crys"+randList[2]+".png')"});
+$(".b4").css({"background-image": "url('assets/images/crys"+randList[3]+".png')"});
 // });
 // });
 
