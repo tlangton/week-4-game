@@ -41,7 +41,7 @@ border-radius: 20px;
 
  #message {
 /*visibility: visible;*/
-display: none;
+display: visible;
  }
 
  #playAgain {

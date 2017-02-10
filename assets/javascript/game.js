@@ -31,7 +31,7 @@ setTarget();
 
 var randNum;
 var randList=[];
-var i=0;
+
 var uniqueNum = 4; //length of list
 var maxValue = 12; //maximum value of list member
 // IMPORTANT - maxValue must be greater than uniqueNum - or crash.
@@ -42,7 +42,8 @@ function get_random()
 }
 
 function setUniqueRandomList() {
-
+	randList = [];
+	var i=0;
 	while	(i < uniqueNum) {
 		get_random();
 		var existsInList = randList.includes (randNum);
@@ -59,15 +60,15 @@ setUniqueRandomList();
 
 
 function setCrystals() {
-round.crystal1 = randList[0];
-round.crystal2 = randList[1];
-round.crystal3 = randList[2];
-round.crystal4 = randList[3];
+	round.crystal1 = randList[0];
+	round.crystal2 = randList[1];
+	round.crystal3 = randList[2];
+	round.crystal4 = randList[3];
 
-console.log( "crystal 1: " + round.crystal1);
-console.log( "crystal 2: " + round.crystal2);
-console.log( "crystal 3: " + round.crystal3);
-console.log( "crystal 4: " + round.crystal4);
+	console.log( "crystal 1: " + round.crystal1);
+	console.log( "crystal 2: " + round.crystal2);
+	console.log( "crystal 3: " + round.crystal3);
+	console.log( "crystal 4: " + round.crystal4);
 
 }
 //call setCrystals when page reloads.
@@ -121,22 +122,17 @@ function addToScore() {
   	setTarget(),
   	$("#targetScore").text("Target: " + round.target),
 
-	setUniqueRandomList(),
+  	setUniqueRandomList(),
   	setCrystals(),
   	console.log(randList),
   	$("#message").css({"display":"none"});
 
 
 
-// var randbkg = 1 + (Math.floor(Math.random()*8));
-// $("body").css({"background-image": "url('assets/images/bkg"+[randbkg]+".png')"});
-// console.log(randbkg);
-
 $(".b1").css({"background-image": "url('assets/images/crys"+randList[0]+".png')"});
 $(".b2").css({"background-image": "url('assets/images/crys"+randList[1]+".png')"});
 $(".b3").css({"background-image": "url('assets/images/crys"+randList[2]+".png')"});
 $(".b4").css({"background-image": "url('assets/images/crys"+randList[3]+".png')"});
-
 
 
 var randbkg = 1 + (Math.floor(Math.random()*8));
@@ -149,7 +145,6 @@ $(".b1").css({"background-image": "url('assets/images/crys"+randList[0]+".png')"
 $(".b2").css({"background-image": "url('assets/images/crys"+randList[1]+".png')"});
 $(".b3").css({"background-image": "url('assets/images/crys"+randList[2]+".png')"});
 $(".b4").css({"background-image": "url('assets/images/crys"+randList[3]+".png')"});
-
 
 
 var randbkg = 1 + (Math.floor(Math.random()*8));
