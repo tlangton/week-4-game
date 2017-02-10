@@ -9,7 +9,7 @@
  	width: 100%;
  	background-color: blue;
  	color: white;
- 	font-family: "Arial";
+ 	font-family: 'Permanent Marker', cursive;
  	font-size: 72px;
  	text-align: center;
  	border-radius: 25px;
@@ -22,7 +22,7 @@
  	width: 100%;
  	background-color: hotpink;
  	color: white;
- 	font-family: "Arial";
+ font-family: 'Permanent Marker', cursive;
  	font-size: 72px;
  	text-align: center;
  	border-radius: 25px;
@@ -33,8 +33,8 @@
  	clear: all;
  	margin-top: 60px;
  	padding: 20px;
- 	font-family: "Arial";
- 	font-size: 24px;
+ 	font-family: 'Permanent Marker', cursive;
+ 	font-size: 36px;
  	background-color: #ddd;
  	border-radius: 20px;
  }
@@ -43,19 +43,17 @@
  	background-color: red;
  	color: white;
  	font-weight: heavy;
+ 	font-family: 'Permanent Marker', cursive;
  }
 
  .hideMe {
  	display: none;
- 	/*background-color: red;
- 	color; white;
- 	font-size: 36px;*/
- 	/*-webkit-animation-delay: 2s;*/
+
  }
 
  #playAgain {
  	margin-top: 60px;
- 	font-family: "Arial";
+ 	font-family: 'Permanent Marker', cursive;
  	font-size: 24px;
  	border-radius: 10px;
  	padding: 20px;
@@ -84,13 +82,13 @@
  }
 
  .b1 {
- 	background-image: url("../images/graphene.jpg");
+ 	background-image: url("../images/crys4.png");
  }
  .b2 {
- 	background-image: url("../images/sphere1.png");
+ 	background-image: url("../images/crys3.png");
  }
  .b3 {
- 	background-image: url("../images/crystal-latticeA.jpg");
+ 	background-image: url("../images/crys2.png");
  }
  .b4 {
  	background-image: url("../images/crys1.png" );
@@ -138,11 +136,11 @@
  }
 
  .t2:before {
- 	background: rgba(0,0,255, 0.5);
+ 	background-color: rgba(0,0,255, 0.5);
  }
 
  .t3:before {
- 	background: rgba(255,0,0, 0.5);
+ 	background-color: rgba(255,0,0, 0.5);
  }
 
  .t4:before {
@@ -151,7 +149,7 @@
 
 
 h2 {
-font-family: arial;
+font-family: 'Permanent Marker', cursive;
 font-size: 24px;
 background-color: #ddd;
 padding: 30px;
@@ -159,4 +157,4 @@ text-align: center;
 border-radius: 10px;
 margin-top: 30px;
 line-height: 40px;
-}
+}</row>

@@ -157,7 +157,7 @@ function addToScore() {
   	}
   	console.log("tint list: "+tintList);
 
-  	$(".t3:before").css({"background": "rgba(255,255,0, 0.5)"});
+  	$(".b3:before").css({"background": "rgba(255,255,0, 0.8)"});
 
   }
 
