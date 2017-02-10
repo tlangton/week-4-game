@@ -70,7 +70,7 @@ display: none;
  	position: relative;
  	top: 20px;
  	border-radius: 40px;
- 	border: darkred solid 2px;
+ 	/*border: gray solid 4px;*/
 
  }
 
@@ -121,6 +121,7 @@ background-image: url("../images/bkg1.png");
     -ms-transition: all .3s linear;
     -o-transition: all .3s linear;
     transition: all .3s linear;
+    border-radius: 40px;
   }
 
   .tint:hover:before {

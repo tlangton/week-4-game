@@ -5,7 +5,6 @@ var game = {
 
 $("#tally").text("Wins: " + game.wins + "  Losses: " + game.losses);
 
-
 var round = {
 	crystal1: 0,
 	crystal2: 0,
@@ -126,18 +125,33 @@ function addToScore() {
   	setCrystals(),
   	console.log(randList),
   	$("#message").css({"display":"none"});
-  }
 
-// $(document).ready(function(){
-var randbkg = 1 + (Math.floor(Math.random()*8));
-$("body").css({"background-image": "url('assets/images/bkg"+[randbkg]+".png')"});
-console.log(randbkg);
+
+
+// var randbkg = 1 + (Math.floor(Math.random()*8));
+// $("body").css({"background-image": "url('assets/images/bkg"+[randbkg]+".png')"});
+// console.log(randbkg);
 
 $(".b1").css({"background-image": "url('assets/images/crys"+randList[0]+".png')"});
 $(".b2").css({"background-image": "url('assets/images/crys"+randList[1]+".png')"});
 $(".b3").css({"background-image": "url('assets/images/crys"+randList[2]+".png')"});
 $(".b4").css({"background-image": "url('assets/images/crys"+randList[3]+".png')"});
-// });
-// });
 
 
+
+var randbkg = 1 + (Math.floor(Math.random()*8));
+$("body").css({"background-image": "url('assets/images/bkg"+[randbkg]+".png')"});
+console.log(randbkg);
+
+}
+
+$(".b1").css({"background-image": "url('assets/images/crys"+randList[0]+".png')"});
+$(".b2").css({"background-image": "url('assets/images/crys"+randList[1]+".png')"});
+$(".b3").css({"background-image": "url('assets/images/crys"+randList[2]+".png')"});
+$(".b4").css({"background-image": "url('assets/images/crys"+randList[3]+".png')"});
+
+
+
+var randbkg = 1 + (Math.floor(Math.random()*8));
+$("body").css({"background-image": "url('assets/images/bkg"+[randbkg]+".png')"});
+console.log(randbkg);
