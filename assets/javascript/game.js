@@ -99,18 +99,19 @@ function addToScore() {
 			gameOver = 1,
 			$("#tally").text("Wins: " + game.wins + "  Losses: " + game.losses),
 			$("#message").text("You Win!"),
-			$("#message").css({"display":"visible"});
+			$("#message").removeClass("hideMe"),
+			$('#message').addClass('animated tada');
 
 
 		} else	game.losses ++,
 		gameOver = 1,
 		$("#tally").text("Wins: " + game.wins + "  Losses: " + game.losses),
 		$("#message").text("You Lose!"),
-		$("#message").css({"display":"visible"});
+		$("#message").removeClass("hideMe"),
+		$('#message').addClass('animated hinge');
 
 	}
 }
-
 
 
   //resets score and target - clears message
@@ -125,28 +126,54 @@ function addToScore() {
   	setUniqueRandomList(),
   	setCrystals(),
   	console.log(randList),
-  	$("#message").css({"display":"none"});
+  	$("#message").addClass("hideMe");
+
+  	imageSwap();
+  	tintSwap();
+  }
 
 
+function tintSwap() {
 
-$(".b1").css({"background-image": "url('assets/images/crys"+randList[0]+".png')"});
-$(".b2").css({"background-image": "url('assets/images/crys"+randList[1]+".png')"});
-$(".b3").css({"background-image": "url('assets/images/crys"+randList[2]+".png')"});
-$(".b4").css({"background-image": "url('assets/images/crys"+randList[3]+".png')"});
+var vTint = [
+"background: rgba(0,255,255, 0.5)",
+"background: rgba(0,0,255, 0.5)",
+"background: rgba(255,0,0, 0.5)",
+"background: rgba(0,255,0, 0.5)",
+"background: rgba(255,0,255, 0.5)",
+"background: rgba(255,255,0, 0.5)"
+];
 
+tintList=[];
 
-var randbkg = 1 + (Math.floor(Math.random()*8));
-$("body").css({"background-image": "url('assets/images/bkg"+[randbkg]+".png')"});
-console.log(randbkg);
+for (var i = 0; i < 4; i++) {
+var tintPanel =  1 + parseInt([Math.floor(Math.random() * 6)]);
+tintList.push(tintPanel);
+
+}
+console.log("tint list: "+tintList);
+
+$(".t3:before").css({"background": "rgba(255,255,0, 0.5)"});
 
 }
 
-$(".b1").css({"background-image": "url('assets/images/crys"+randList[0]+".png')"});
-$(".b2").css({"background-image": "url('assets/images/crys"+randList[1]+".png')"});
-$(".b3").css({"background-image": "url('assets/images/crys"+randList[2]+".png')"});
-$(".b4").css({"background-image": "url('assets/images/crys"+randList[3]+".png')"});
 
 
-var randbkg = 1 + (Math.floor(Math.random()*8));
-$("body").css({"background-image": "url('assets/images/bkg"+[randbkg]+".png')"});
-console.log(randbkg);
+tintSwap();
+
+
+  function imageSwap() {
+
+  	$(".b1").css({"background-image": "url('assets/images/crys"+randList[3]+".png')"});
+  	$(".b2").css({"background-image": "url('assets/images/crys"+randList[2]+".png')"});
+  	$(".b3").css({"background-image": "url('assets/images/crys"+randList[1]+".png')"});
+  	$(".b4").css({"background-image": "url('assets/images/crys"+randList[0]+".png')"});
+
+
+  	var randbkg = 1 + (Math.floor(Math.random()*8));
+  	$("body").css({"background-image": "url('assets/images/bkg"+[randbkg]+".png')"});
+  	console.log(randbkg);
+
+  }
+
+  imageSwap();
