@@ -99,6 +99,7 @@ function addToScore() {
 			gameOver = 1,
 			$("#tally").text("Wins: " + game.wins + "  Losses: " + game.losses),
 			$("#message").text("You Win!"),
+			$("#playAgain").removeClass("hideMe"),
 			$("#message").removeClass("hideMe"),
 			$('#message').addClass('animated tada');
 
@@ -107,10 +108,12 @@ function addToScore() {
 		gameOver = 1,
 		$("#tally").text("Wins: " + game.wins + "  Losses: " + game.losses),
 		$("#message").text("You Lose!"),
+		$("#playAgain").removeClass("hideMe"),
 		$("#message").removeClass("hideMe"),
 		$('#message').addClass('animated hinge');
 
 	}
+	$(".gamePlay").addClass("hideMe")
 }
 
 
@@ -127,39 +130,40 @@ function addToScore() {
   	setCrystals(),
   	console.log(randList),
   	$("#message").addClass("hideMe");
-
+  	$("#playAgain").addClass("hideMe")
+  	$('#message').removeClass('animated tada hinge'),
   	imageSwap();
   	tintSwap();
   }
 
 
-function tintSwap() {
+  function tintSwap() {
 
-var vTint = [
-"background: rgba(0,255,255, 0.5)",
-"background: rgba(0,0,255, 0.5)",
-"background: rgba(255,0,0, 0.5)",
-"background: rgba(0,255,0, 0.5)",
-"background: rgba(255,0,255, 0.5)",
-"background: rgba(255,255,0, 0.5)"
-];
+  	var vTint = [
+  	"background: rgba(0,255,255, 0.5)",
+  	"background: rgba(0,0,255, 0.5)",
+  	"background: rgba(255,0,0, 0.5)",
+  	"background: rgba(0,255,0, 0.5)",
+  	"background: rgba(255,0,255, 0.5)",
+  	"background: rgba(255,255,0, 0.5)"
+  	];
 
-tintList=[];
+  	tintList=[];
 
-for (var i = 0; i < 4; i++) {
-var tintPanel =  1 + parseInt([Math.floor(Math.random() * 6)]);
-tintList.push(tintPanel);
+  	for (var i = 0; i < 4; i++) {
+  		var tintPanel =  1 + parseInt([Math.floor(Math.random() * 6)]);
+  		tintList.push(tintPanel);
 
-}
-console.log("tint list: "+tintList);
+  	}
+  	console.log("tint list: "+tintList);
 
-$(".t3:before").css({"background": "rgba(255,255,0, 0.5)"});
+  	$(".t3:before").css({"background": "rgba(255,255,0, 0.5)"});
 
-}
+  }
 
 
 
-tintSwap();
+  tintSwap();
 
 
   function imageSwap() {
@@ -177,3 +181,4 @@ tintSwap();
   }
 
   imageSwap();
+

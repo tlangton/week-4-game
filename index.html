@@ -54,7 +54,7 @@
 			<div class="col-lg-4"></div>
 			<div class="col-lg-4">
 				<div id="message" class="hideMe">
-				<!-- message -->
+					<!-- message -->
 				</div>
 			</div>
 			<div class="col-lg-4"></div>
@@ -62,34 +62,54 @@
 		<div class="row">
 			<div class="col-lg-4"></div>
 			<div class="col-lg-4">
-				<button id="playAgain" class="btn btn-warning">
+				<button id="playAgain" class="btn btn-warning hideMe">
 					Play Again?
 				</button>
 			</div>
 			<div class="col-lg-4">
 			</div>
 		</div>
-		<script type="text/javascript">
-			$("document").ready(function() {
+		<div class="row">
+			<div class="col-lg-2"></div>
+			<div class="col-lg-8 gamePlay">
+				<h2>Game Play <br>
+					Clicking on the gems gives you points.<br>
+					The points assigned to each gem changes in every round.<br>
+					Your score adds the points from each gem you choose.<br>
+					You WIN by matching your score to the TARGET SCORE.<br>
+					Go over the TARGET SCORE, and you LOSE!<br>
+					<button id="dismiss" class="btn btn-warning">
+						Dismiss
+					</button></h2>
+				</div>
+				<div class="col-lg-2">
+				</div>
+			</div>
+			<script type="text/javascript">
+				$("document").ready(function() {
 
-				$("#targetScore").text("Target: " + round.target);
-				$("#boxScore").text("Score: " + round.score);
+					$("#targetScore").text("Target: " + round.target);
+					$("#boxScore").text("Score: " + round.score);
 
-				$('.crystalButton').click(function() {
-					butID = $(this).attr('buttonId');
-					addToScore();
+					$('.crystalButton').click(function() {
+						butID = $(this).attr('buttonId');
+						addToScore();
+					});
+
+					$('#playAgain').click(function(){
+						playAgain();
+					});
+
+					$('#dismiss').click(function(){
+						$(".gamePlay").addClass("hideMe")
+					});
+
+
+
 				});
-
-				$('#playAgain').click(function(){
-					playAgain();
-				});
-
-
-
-			});
-		</script>
+			</script>
+		</div>
 	</div>
-</div>
 </div>
 
 <script type="text/javascript" src="assets/javascript/game.js"></script>
