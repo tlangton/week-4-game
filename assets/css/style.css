@@ -3,7 +3,7 @@
  }
 
 
- #boxScore {
+ #boxScore,  #targetScore {
  	margin:20px;
  	height: 80px;
  	width: 100%;
@@ -17,15 +17,8 @@
 
 
  #targetScore {
- 	margin:20px;
- 	height: 80px;
- 	width: 100%;
  	background-color: hotpink;
- 	color: white;
- font-family: 'Permanent Marker', cursive;
- 	font-size: 72px;
- 	text-align: center;
- 	border-radius: 25px;
+
  }
 
  #tally, #message {
